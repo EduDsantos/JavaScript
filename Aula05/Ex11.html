@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual é o seu país? :<input type="text" name="paistxt" id="paistxt">
+    <input type="button" value="Checar" onclick="conferir()">
+    <div id="res"></div>
+
+    <script>
+        function conferir(){
+            var pais = document.getElementById('paistxt')
+            var res = document.getElementById('res')
+            var paist = String(pais.value)
+            res.innerHTML = `<p>O seu país atual é ${pais.value}</p>`
+            if(paist == 'Brasil'){
+                res.innerHTML +='<p>Voce é Brasileiro!</p>'
+            }else{
+                res.innerHTML +='<p>voce é Estrangeiro!</p>'
+            }
+        }
+
+    </script>
+</body>
+</html>
