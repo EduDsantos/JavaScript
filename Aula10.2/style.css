@@ -1,0 +1,27 @@
+body{
+    background-color:rgb(100, 74, 125);
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section{
+    text-align:center;
+    background-color: rgba(128, 128, 128, 0.455);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: auto;
+    padding:5px;
+}
+h1{
+    text-align:center;
+}
+#txtn{
+    border-radius: 10px;
+    padding: 2px;
+}
+select{
+    box-shadow: 0px 0px 1px black;
+    background-color: rgba(182, 254, 255, 0.386);
+}
+
