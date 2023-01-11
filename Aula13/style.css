@@ -1,0 +1,24 @@
+body{
+    background-color: #26547C;
+}
+
+main{
+    background-color:#ef476e6f;
+    width: 430px;
+    height: 300px;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    padding:10px;
+}
+h1{
+    text-align:center;
+    background-color: rgba(255, 255, 255, 0.275);
+    box-shadow: 1px 1px 3px black;
+}
+
+select{
+    box-shadow: 1px 1px 3px black;
+    border-radius: 10;
+    padding: 5px;
+}
