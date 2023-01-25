@@ -5,7 +5,7 @@ body{
 main{
     background-color:#ef476e6f;
     width: 430px;
-    height: 300px;
+    height: 100%;
     margin:auto;
     border-radius: 10px;
     box-shadow: 1px 1px 3px black;
@@ -21,4 +21,8 @@ select{
     box-shadow: 1px 1px 3px black;
     border-radius: 10;
     padding: 5px;
+}
+
+select{
+    width: 150px;
 }
