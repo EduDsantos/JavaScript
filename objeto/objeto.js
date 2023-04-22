@@ -1,20 +1,11 @@
 const objeto = {
-    nome: 'eduardo',
-    sobrenome: 'santos',
+    nome: 'Eduardo Santos',
     idade: 19,
-    fala() {
-        console.log(`A idade é ${this.idade}`);
-        console.log(`O nome é ${this.nome}`);
-        console.log(`E o sobrenome é ${this.sobrenome}`);
-    },
-       
-    incrementoIdade(){
-        this.idade++
+
+    falar(){
+        console.log('Meu nome é', this.nome)
     }
-    
-};
+}
 
-
-objeto.incrementoIdade();
-objeto.fala();
+objeto.falar()
 
