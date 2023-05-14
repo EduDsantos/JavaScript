@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(55, 77, 99);
+}
+
+.container{
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    background-color:rgba(161, 188, 194, 0.668);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black solid;
+    font-family: 'Courier New', Courier, monospace;
+    padding:10px;
+}
+
+form input,form label,form button {
+    width: 100%;
+    display: block;
+}
+button{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.paragrafo{
+    background-color: rgb(77, 219, 77);
+}
+
+.bad{
+    background-color: red;
+}
