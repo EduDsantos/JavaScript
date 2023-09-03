@@ -1,0 +1,14 @@
+body{
+    background-color:darkcyan;
+    font-family: "Helvetica Neue",Helvetica;
+    color:black;
+}
+main{
+    background-color:white;
+    width:400px;
+    height: 300px;
+    border-radius:10px;
+    box-shadow: 1px 1px 3px black solid;
+    margin: auto;
+    padding: 10px;
+}

@@ -1,0 +1,42 @@
+\\teste de conhecimento
+body{
+    background-color: rgba(0, 0, 0, 0.928);
+
+}
+
+div{
+    color:rgb(5, 3, 3);
+    background-color:rgba(135, 206, 250, 0.553);
+    border-radius:4px;
+    padding:6px;
+    margin:auto;
+    width: 4em;
+    height: 1em;
+}
+
+main{
+    padding-top: 3px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    background-color: rgb(71, 119, 157);
+    width: 200px;
+    border-radius: 10px;
+}
+
+input{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#um{
+    background-color:rgb(73, 141, 131);
+}
+
+#dois{
+    background-color: lightyellow;
+}
+
+#tres{ 
+    background-color: rgb(137, 45, 45);
+}
