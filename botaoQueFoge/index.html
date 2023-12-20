@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+  <style>
+    
+    body{
+      background-color: lightcoral;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+    }
+    h1{
+      text-align: center;
+      color: blueviolet;
+    }
+    body * {
+      box-sizing: border-box;
+    }
+    
+    main{
+      
+      background-color: lightcyan;
+      padding: 10px;
+      border-radius: 10px;
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      text-align: center;
+    }
+    #nao{
+      border-radius: 10px;
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      margin-left: 60px;
+    }
+    #sim{
+      background-color: white;
+      border-radius: 10px;
+      position: absolute;
+      height: 40px;
+      width: 40px;
+
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>teste</h1>
+    <h2>aaaaaaaaaaaaaaaaa</h2>
+    <h2>aaaaaaaaaaaaaaaaa</h2>
+    <h2>aaaaaaaaaaaaaaaaa</h2>
+    
+    <a href="#"><button id="sim">sim</button></a>
+    <button onmouseover="sair()" id="nao">nao</button>
+  </main>
+  <script>
+    function sair(){ 
+
+      let botao = document.getElementById("nao");
+      
+      let  largura = window.innerWidth;
+      let  altura = window.innerHeight;
+      
+      let  maxX = largura - botao.offsetWidth;
+      let  maxY = altura  - botao.offsetHeight;
+      
+      let  aleatoriox = Math.floor(Math.random() * maxX);
+      let  aleatorioy = Math.floor(Math.random() * maxY);
+      
+      botao.style.left = aleatoriox + "px";
+      botao.style.top = aleatorioy + "px";
+    }
+      
+
+
+
+
+  </script>
+</body>
+</html>
