@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Cadastro de usuario e calculadora de 4 operaçoes</h1>
+
+        <script>
+            const nome = prompt("Digite o nome do usuario")
+            const sobrenome = prompt("Digite o sobrenome do usuario")
+            const CampEstudo = prompt("Digite o campo de estudo do usuario")
+            const AnoNasc = prompt("Digite o Ano de nascimento do usuario")
+            
+            const ano = 2023
+            const idade = ano - AnoNasc
+
+            alert("Bem vindo " + nome + sobrenome + "\n" + idade + " anos "+ "\n" + " do curso de " + CampEstudo)
+
+            const num1 = Number(prompt("Digite o primeiro numero"))
+            const num2 = Number(prompt("Digite o segundo numero"))
+
+            const soma = console.log(num1 + num2)
+            const sub = console.log(num1 - num2)
+            const div = console.log(num1 / num2)
+            const mult = console.log(num1 * num2)
+        </script>
+    </body>
+    </html>

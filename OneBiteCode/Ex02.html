@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Exercício 2: Teste de velocidade e cálculo de dano</h1>
+    <script>
+        /* 
+        const carro1 = prompt("Digite o nome do primeiro veiculo:")
+        const velo1 = prompt("Digite a velocidade do primeiro veiculo:\n")
+        
+        const carro2 = prompt("Digite o nome do segundo veiculo:")
+        const velo2 = prompt("Digite a velocidade do segundo veiculo:")
+        
+        console.log(carro1, carro2)
+        console.log(velo1 + "km/h", velo2 + "km/h")
+        
+        if (velo1 > velo2) {
+            console.log("O " + carro1 + " é mais rapido")
+        } else {
+            console.log("O " + carro2 + " é mais rapido")
+        }
+        */
+
+        const personagem1 = prompt("Digite o nome do seu personagem: ")
+        const poder1 = prompt("Dano do poder de ataque ")
+
+        const vilao = prompt("Digite o nome do vilao: ")
+        let vidaVi = Number(prompt("pontos de vida: "))
+        const defesa = Number(prompt("Poder de defesa"))
+        const escudo = confirm("Possui escudo?")
+
+        
+        if (poder1 > defesa && escudo == false) {
+            var dano = poder1 - defesa
+            var newvida = dano
+        }else if(poder1 > defesa && escudo == true){
+             dano = poder1 / defesa
+             newvida = vidaVi - dano
+        }else if(poder1 <= defesa){
+            dano = 0
+            newvida = vidaVi
+        }
+        
+            
+
+        alert("heroi: " + personagem1 +"\n" + " dano: " + poder1 + "\n" + "-----------------------------------------------------------"+
+         "\n" + " vilao: " + vilao + "\n" +" vida: " +vidaVi+ "\n" +" defesa: " +defesa + "\n" +" o vilao tomou " + dano + " e ficou com: " + newvida +" de vida")
+        </script>
+
+</body>
+
+</html>
