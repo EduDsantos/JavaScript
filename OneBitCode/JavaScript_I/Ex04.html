@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4: Visitando novas cidades
+    </title>
+</head>
+<body>
+    <h1>Exercício 4: Visitando novas cidades
+    </h1>
+    
+
+    <script>
+        alert("Bem vindo turista!\nQual o seu nome?")
+        const nome = prompt("Digite o seu nome: ")
+
+        let cidades = ""
+        let contagem = ""
+        let resp = prompt("Você ja visitou alguma cidade?")
+        
+        while (resp === "sim"){
+            let cidade = prompt("Qual o nome da cidade? ")
+            cidades += " - " + cidade + " \n"
+            contagem++
+
+            resp = prompt("você visitou alguma outra cidade? ")
+        }
+        alert ( "Turista " + nome + "\n" + 
+        "Quantidade de cidades visitadas: " + contagem + "\n" +
+        "Cidades visitadas:\n " + cidades)
+        
+    </script>
+</body>
+</html>

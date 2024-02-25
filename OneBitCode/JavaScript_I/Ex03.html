@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3: Conversor de Medidas</title>
+</head>
+
+<body>
+    <h1>Exercício 3: Conversor de Medidas</h1>
+
+    <script>
+        let medida = Number(prompt("Por favor digite quantos metros voce deseja: "))
+        let conversao = prompt("para qual medida irá converter?")
+        let resultado;
+        switch (conversao) {
+            case "mm":
+                resultado = medida * 1000
+                break;
+            case "cm":
+                resultado = medida * 100
+                break;
+            case "dm":
+                resultado = medida * 10
+                break;
+            case "dam":
+                resultado = medida / 10
+                break;
+            case "hm":
+                resultado = medida / 100
+                break;
+            case "km":
+                resultado = medida / 1000
+                break;
+            default:
+                resultado = "opçao invalida"
+
+
+        }
+        alert("Metros: " + medida + '\n' + 'conversao desejada: ' + conversao + '\n' + 'resultado: ' + resultado)
+    </script>
+</body>
+
+</html>

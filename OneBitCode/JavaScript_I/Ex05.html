@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5: Menu interativo e controle financeiro
+    </title>
+</head>
+
+<body>
+    <h1>Exercício 5: Menu interativo e controle financeiro
+    </h1>
+
+    <script>
+       /* let opcao = '';
+        do {
+
+            opcao = prompt("Escolha uma opção \n"
+                + "OPÇÕES \n" +
+                "1.Entrar \n" +
+                "2.Atualizar \n" +
+                "3.Testar \n" +
+                "4.Deletar \n" +
+                "5.Encerrar")
+
+                if(opcao == '1'){
+                    alert("Voce escolheu a 1° opcao!")
+                }
+                else if(opcao =='2'){
+                    alert("Voce escolheu a 2° opcao!")
+                }
+                else if(opcao =='3'){
+                    alert("Voce escolheu a 3° opcao!")
+                }
+                else if(opcao =='4'){
+                    alert("Voce escolheu a 4° opcao!")
+                }
+                else if(opcao =='5'){
+                    alert("Programa encerrado!")
+                }
+
+        } while (opcao != '5');
+        */
+       
+        let money = '';
+        let sacar = '';
+        let opcao = '';
+        let depositar = '';
+
+        money = Number(prompt("Qual a quantidade de dinheiro disponivel?"))
+        do{
+
+            opcao = prompt("Saldo: " +money+" R$"+ "\n"+
+            "1.Adicionar mais saldo \n" +
+            "2.Sacar \n" +
+            "3.Encerrar")
+
+            if(opcao == '1'){
+                depositar = Number(prompt("Depositar: "))
+                 money += depositar   
+            }
+
+            if(opcao == '2'){
+                sacar = prompt("Sacar: ")
+                money -= sacar
+            }
+
+        }while(opcao != '3')
+
+    </script>
+</body>
+
+</html>
