@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7: Fila de espera - Pilha de cartas
+    </title>
+</head>
+
+<body>
+    <h1>Exercício 7: Fila de espera - Pilha de cartas</h1>
+
+    <script>
+        let opcao = ''
+        let fila = []
+
+        do {
+            let pacientes = ''
+            for (let i = 0; i < fila.length; i++) {
+                pacientes += (i + 1) + "° - " + fila[i] + '\n'
+            }
+
+            opcao = prompt(
+                'pacientes: \n' + pacientes +
+                "\nEscolha uma ação:\n 1-  Novo paciente \n 2-  Consultar paciente \n 3- SAIR"
+            )
+
+            switch (opcao) {
+                case '1':
+                    const novoPaciente = prompt("Qual é o nome do novo paciente?: ")
+                    fila.push(novoPaciente)
+                    break
+
+                case '2':
+                    const pacienteConsultado = fila.shift()
+                    if (!pacienteConsultado) {
+                        alert("Nao há pacientes na fila!")
+                    } else {
+                        alert(pacienteConsultado + " foi removido da fila ")
+                    }
+                    break
+
+                case '3': fila
+                    alert("Encerrando")
+                    break
+
+                default:
+                    alert("Opçao invalida")
+                    break
+            }
+
+        } while (opcao !== '3')
+
+
+    </script>
+
+</body>
+
+</html>
