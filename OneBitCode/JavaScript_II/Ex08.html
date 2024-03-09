@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8: Cadastro de imóveis
+    </title>
+</head>
+
+<body>
+    <h1>Exercício 8: Cadastro de imóveis</h1>
+
+    <script>
+
+        let opcao = ''
+        let imoveisCadastrados = []
+        do {
+            opcao = prompt("Imoveis Cadastrados: " +
+                imoveisCadastrados.length + "\n" + "\n" +
+                "MENU\n" +
+                "1. Adicionar imóvel: \n" +
+                "2. Monstrar todos os imóveis: \n" +
+                "3. SAIR")
+
+            switch (opcao) {
+                case '1': let novoImovel = {
+                    nomeDoDono: prompt("nome do proprietário: "),
+                    QtQuartos: prompt("Quantidade de Quartos: "),
+                    QtBanheiros: prompt("Quantidade de banheiros: "),
+                    garagem: confirm("Possui Garagem?")
+                }
+                    imoveisCadastrados.push(novoImovel)
+                    break;
+
+                case '2': for (let i = 0; i < imoveisCadastrados.length; i++) {
+                    alert("imoveis: " + (i + 1)+"\n\n" +
+                        "Proprietário: " + imoveisCadastrados[i].nomeDoDono +"\n" +
+                        "Quantidade de banheiros: " + imoveisCadastrados[i].QtBanheiros+"\n" +
+                        "Quantidade de quartos: " + imoveisCadastrados[i].QtQuartos +"\n" +
+                        "Possui garagem?: " + imoveisCadastrados[i].garagem)
+                }
+                    break;
+
+                case '3': alert("Encerrando programa!")
+            }
+
+
+            console.log(imoveisCadastrados)
+        } while (opcao !== '3')
+    </script>
+</body>
+
+</html>
