@@ -12,6 +12,7 @@
     <h1>Exercício 7: Fila de espera - Pilha de cartas</h1>
 
     <script>
+        /*
         let opcao = ''
         let fila = []
 
@@ -51,7 +52,35 @@
             }
 
         } while (opcao !== '3')
+    */
 
+
+        const baralho = []
+        let opcao = '';
+
+        do {
+            opcao = prompt("Cartas no baralho: " + baralho.length +
+                "\n1. Adicionar uma carta " + "\n2. Puxar uma carta" + "\n3. SAIR")
+
+            switch (opcao) {
+                case '1': let novaCarta = prompt("Qual é a carta?")
+                    baralho.push(novaCarta)
+                    break;
+                case '2': const cartaPuxada = baralho.pop()
+
+                    if (!cartaPuxada) {
+                        alert("Nao tem cartas no baralho")
+
+                    } else {
+                        alert("A carta que voce tirou é a: " + cartaPuxada)
+                    }
+
+                case '3':
+                    alert("saindo")
+                    break;
+            }
+
+        } while (opcao !== '3')
 
     </script>
 
