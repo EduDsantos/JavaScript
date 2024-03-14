@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9: Calculadora geométrica
+    </title>
+</head>
+
+<body>
+    <h1>Exercício 9: Calculadora geométrica
+    </h1>
+
+    <script>
+        function AreaTriangulo() {
+            const base = parseFloat(prompt("Informe a base do triângulo:"))
+            const altura = parseFloat(prompt("Informe a altura do triângulo:"))
+            return base * altura / 2
+        }
+
+
+        function AreaRetangulo() {
+            const base = parseFloat(prompt("Informe a base do retângulo:"))
+            const altura = parseFloat(prompt("Informe a altura do retângulo:"))
+            return base * altura
+        }
+
+        function AreaQuadrado() {
+            const lado = parseFloat(prompt("Informe a área do quadrado:"))
+            return lado * lado
+        }
+
+        function AreaTrapezio() {
+            const baseMenor = parseFloat(prompt("Informe a base menor do trapézio:"))
+            const baseMaior = parseFloat(prompt("Informe a base maior do trapézio:"))
+            const altura = parseFloat(prompt("Informe a altura do trapézio:"))
+            return (baseMaior + baseMenor) * altura / 2
+        }
+
+        function AreaCirculo() {
+            const raio = parseFloat(prompt("Informe o raio do círculo:"))
+            return (3.14 * raio * raio)
+        }
+
+
+        function exibirMenu() {
+            return prompt(
+                "Calculadora Geométrica\n" +
+                "1. Calcular área de triângulo\n" +
+                "2. Calcular área de retângulo\n" +
+                "3. Calcular área de quadrado\n" +
+                "4. Calcular área de trapézio\n" +
+                "5. Calcular área de círculo\n" +
+                "6. Sair\n"
+            )
+        }
+
+        function executar() {
+            let opcao = ""
+
+            do {
+                opcao = exibirMenu()
+                let resultado
+
+                switch (opcao) {
+                    case "1":
+                        resultado = AreaTriangulo()
+                        break
+                    case "2":
+                        resultado = AreaRetangulo()
+                        break
+                    case "3":
+                        resultado = AreaQuadrado()
+                        break
+                    case "4":
+                        resultado = AreaTrapezio()
+                        break
+                    case "5":
+                        resultado = AreaCirculo()
+                        break
+                    case "6":
+                        alert("Saindo...")
+                        break
+                    default:
+                        alert("Opção inválida!")
+                        break
+                }
+                if (resultado) {
+                    alert("Resultado: " + resultado)
+                }
+
+            } while (opcao !== "6");
+        }
+
+        executar()
+
+    </script>
+
+</body>
+
+</html>
