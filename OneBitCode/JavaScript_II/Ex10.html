@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <script>
+        
+                    const vagas= []
+        
+                    function listarVagas(){
+                        const vagasEmTexto = vagas.reduce(function(textoFinal, vaga,indice){
+                            textoFinal += indice + ". "
+                            textoFinal +=vaga.nome
+                            textoFinal +=" (" + vaga.candidatos.length +  "candidatos)\n"
+                            return textoFinal
+                        },"")
+                        alert(vagasEmTexto)
+                    }
+
+                    function novaVaga(){
+                        const nome = prompt ("Informe um nome para a vaga: ")
+                        const descricao = prompt("Informe uma descrição para a vaga: ")
+                        const dataLimite = prompt("Informe uma data limite (dd/mm/aaaa) para a vaga")
+
+                        const confirmacao = confirm(
+                            "Deseja criar uma nova vaga com essa informações? \n" +
+                            "Nome: " +nome + "\n Descrição: " + descricao + "\nDataLimite: " + dataLimite
+                        )
+
+                        if(confirmacao){
+                            const novaVaga = {nome,descricao,dataLimite, candidatos: []}
+                            vagas.push(novaVaga)
+                            alert("Vaga criada!")
+                        }
+                    }
+
+                    function exibirVaga(){
+                        const indice = prompt("Informe o indice da vaga que deseja exibir: ")
+                        const vaga = vagas[indice]
+                        const candidatosEmTexto = vaga.candidatos.reduce(function(textoFinal, candidato){
+                            return textoFinal + "\n - " + candidato
+                        }, "")
+                        alert(
+                            "Vaga n° " + indice + 
+                            "\nNome: " + vaga.nome +
+                            "\nDescrição: " + vaga.descricao + 
+                            "\nData Limite: " + vaga.dataLimite +
+                            "\nCandidatos inscritos: " + candidatosEmTexto
+                        )
+                    }
+
+                    function inscreverCandidato(){
+                        const candidato = prompt("Informe o nome do candidato: ")
+                        const indice = prompt("Informe o indice da vaga para qual o candidato deseja se inscrever: ")
+                        const vaga = vagas[indice]
+
+                        const confirmacao = confirm(
+                            "Deseja inscrever o candidato " + candidato + " na vaga " + indice + " ?\n" +
+                            "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+                        )
+
+                        if(confirmacao){
+                            vaga.candidatos.push(candidato)
+                            alert("Inscrição realizada")
+                        }
+                    }
+
+                    function excluirVaga(){
+                        const indice = prompt("informe o indice da vaga que deseja excluir")
+                        const vaga = vagas[indice]
+
+                        const confirmacao = confirm(
+                            "Tem certeza que deseja excluir a vaga " + indice + "? \n" +
+                            "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao + "\nData limite: " + vaga.dataLimite
+                        )
+                        if(confirmacao){
+                            vagas.splice(indice, 1)
+                            alert("Vaga excluida!")
+                        }
+                    }
+
+                    function exibirMenu(){
+                        const opcao= prompt(
+                            "Cadastro de vagas de emprego" + 
+                            "\n\nEscolha uma das opções:" +
+                            "\n1.Listar vagas disponiveis" +
+                            "\n2.Criar uma nova vaga" + 
+                            "\n3.Visualizar uma vaga"+
+                            "\n4.Inscrever um candidato" + 
+                            "\n5.Excluir uma vaga" +
+                            "\n6.SAIR"
+
+                        )
+                        return opcao
+                    }
+
+                    function executar(){
+                        let opcao = ""
+
+                        do{
+                            opcao = exibirMenu()
+
+                            switch(opcao){
+                                case "1":
+                                    listarVagas()
+                                    break;
+                                case "2":
+                                    novaVaga()
+                                    break;
+                                case "3":
+                                    exibirVaga()
+                                    break;
+                                case "4":
+                                    inscreverCandidato()
+                                    break;
+                                case "5":
+                                    excluirVaga()
+                                    break;
+                                case "6":
+                                    alert("Saindo!")
+                                    default:
+                                        alert("Opcao invalida")
+                            }
+                        }while(opcao !== "6")
+                    }
+
+                    executar()
+
+
+
+
+
+
+
+
+        // function dividir(num) {
+        //     console.log(num)
+        //     if (num % 2 === 0) {
+        //         dividir(num / 2)
+        //     } else {
+        //         return num
+        //     }
+        // }
+
+        // // dividir(40)
+
+
+        // function fatorial(num){
+        //     console.log(num)
+        //     if(num === 0){
+        //         return 1 //caso base
+        //     }else if(num === 1){
+        //         return 1
+        //     }else{
+        //         console.log(num + " * !" + (num - 1))
+        //         return  num * fatorial(num - 1)
+        //     }
+
+        // }
+
+        // console.log(fatorial(5))
+
+        // function calcular(a,b, operacao){
+        //     console.log("realizando uma opereção")
+        //     const resultado = operacao(a, b)//somar
+        //     return resultado
+        // }
+
+        // function somar(x,y){
+        //     console.log("Realizando uma soma")
+        //     return x + y
+        // }
+
+        // function subtrair(x,y){
+        //     console.log("realizando uma subtraçao")
+        //     return x - y
+        // }
+
+        // console.log(calcular(20,5,subtrair))
+
+        // function exibirElemento(elemento, indice, array){
+        //     console.log({
+        //         elemento,
+        //         indice,
+        //         array
+        //     })
+        // }
+
+        // const lista = ["maça", "banana","laranja", "limoes"]
+
+        // for(let i = 0; i< lista.length;i++){
+        //     exibirElemento(lista[i],i,lista)
+        // }
+
+        // lista.forEach(exibirElemento)
+
+        // const personagens = [
+        //     { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+        //     { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+        //     { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+        //     { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+        //     { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+        //     { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+        //     { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+        // ]
+
+        //MAP
+
+        /*
+        >>Uma das formas de fazer é com o FOR<<
+        const nomes = []
+            for(let i = 0; i< personagens.length; i++){
+                nomes.push(personagens[i].classe)
+             }
+        */
+
+        /*
+       >> utilizando o MAP<<
+
+        const nomes = personagens.map(function(personagem){
+            return personagem.nome
+        })
+        console.log(nomes)
+        */
+        
+        
+
+        //FILTER
+
+        /*
+
+        >>Filtrando sem o metodo filter<<
+    
+        const orcs = []
+        for (let i = 0; i < personagens.length; i++) {
+            if (personagens[i].raca === "Orc") {
+                orcs.push(personagens[i])
+            }
+        }
+        console.log(orcs)
+
+        >>utilizando o FILTER<<
+
+        const orcs = personagens.filter(function(personagem){
+            return personagem.raca ==="Orc"
+        })
+        console.log(orcs)
+        */
+
+        //REDUCE
+
+        /*
+        const nivelTotal = personagens.reduce(function(valorAcumulado, personagem){
+            return valorAcumulado + personagem.nivel
+        },0)
+        
+        console.log(nivelTotal)
+        */
+
+        //SORT
+        // personagens.sort(function(a,b){
+        //     return a.nivel - b.nivel
+        // })
+
+        // console.log(personagens)
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
