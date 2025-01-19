@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Rand([min = 0, max = 1000 ]) {
+            if (min > max) [min,max] = [max,min]
+            const valor = Math.random() * (max - min) + min
+            return Math.floor(valor)
+        }
+
+        console.log(Rand([100,40]))
+        console.log(Rand([955]))
+        console.log(Rand([]))
+    </script>
+</body>
+
+</html>

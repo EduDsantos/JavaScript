@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+   
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    padding: 50px;
+    text-align: center;
+    
+    
+}
+header h1, h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:200 ;
+    margin-bottom: 1rem;
+}
+
+.introduction{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.introduction button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+
+.principal img{
+    margin-bottom: 30px;
+}
+
+.principal {
+    text-align: center;
+    padding: 20px;
+}
+
+.principal button{
+    margin-top: 20px;
+    background-color: rgb(87, 185, 231);
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+#ver-mais{
+    background-color: black;
+}
+
+.conclusao{
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.conclusao h2{
+    text-transform: capitalize;
+}
+
+.conclusao button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 13px;
+    margin-top: 20px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

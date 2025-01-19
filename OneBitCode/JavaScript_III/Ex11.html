@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Escalação de Times</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">ESCALAÇÃO DE TIMES</h1>
+    <hr>
+    <main>
+        
+            <ul id="lista" >
+                <label for="nome">Nome do jogador</label>
+                <input type="text" id="nomeJogador">
+
+                <label for="posicao">Posição do jogador</label>
+                <input type="text" id="posicao">
+
+                <label for="camisa">camisa do jogador</label>
+                <input type="text" id="camisa">
+
+                <button onclick="escalar()">Escalar jogador</button>
+                <button onclick="remover()">Remover jogador</button>
+            </ul>
+
+            <section id="jogadorList"></section>
+        
+    </main>
+
+    <script>
+
+        function escalar(){
+            const nomeJogador = document.getElementById('nomeJogador').value
+            const posicao = document.getElementById('posicao').value
+            const camisa = document.getElementById('camisa').value
+
+            const teamList=document.getElementById('jogadorList')
+            const escalacao = document.createElement('li')
+            escalacao.id = 'player - '+ camisa
+            escalacao.innerText = posicao + ": " + nomeJogador + " (" + camisa + " )"
+            teamList.appendChild(escalacao)
+
+        }
+        
+        function remover(){
+            const number = document.getElementById('numberToRemove').value
+            const playerToRemove = document.getElementById('player' + number)
+
+            const confirmation = confirm('Remover jogador' +  playerToRemove.innerText + '?')
+
+            if(confirmation){
+                document.getElementById('teamList').removeChild(playerToRemove)
+                document.getElementById('numberToRemove').value = ''
+            }
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
