@@ -5,3 +5,4 @@ function real(valor){
 }
 
 console.log(real(0.1 + 0.2))
+
