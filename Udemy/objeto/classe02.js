@@ -1,8 +1,9 @@
 class Avo {
-    constructor(sobrenome){
+    constructor(sobrenome='silvestre'){
         this.sobrenome = sobrenome
     }
 }
+const avo = new Avo
 
 class Pai extends Avo{
     constructor(sobrenome, profissao ='Professor'){
@@ -19,3 +20,4 @@ class Filho extends Pai{
 
 const filho = new Filho
 console.log(filho)
+console.log(avo)
