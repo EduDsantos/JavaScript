@@ -1,0 +1,41 @@
+<h1>projeto</h1>
+<ul class="tree">
+    <li>
+        <span teste>projeto</span>
+        <ul>
+            <span teste>pomodoro</span>
+            <ul>
+                <li>script.js</li>
+                <li>index.html</li>
+            </ul>
+        </ul>
+        <ul>
+            <span teste>pokedex</span>
+            <ul>
+                <li>script.js</li>
+                <li>index.html</li>
+                <li>style.css</li>
+            </ul>
+        </ul>
+    </li>
+    <li>
+        <span teste>sociais</span>
+        <ul>
+            <li>github</li>
+            <li>insta</li>
+        </ul>
+    </li>
+</ul>
+
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[teste]').forEach(folder=>{
+        folder.onclick = function(e){
+            console.log('teste')
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d ==='nome'? 'block' : 'none'
+        } 
+    })
+</script>
