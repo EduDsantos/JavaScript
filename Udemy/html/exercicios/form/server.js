@@ -10,4 +10,12 @@ app.post('/usuarios', (req, resp) =>{
 
 })
 
+app.post('/usuarios/:id', (req, resp) =>{
+    console.log(req.params.id)
+    console.log(req.body)
+    resp.send('<h1>Parabens, foi alterado </h1>')
+
+})
+
+
 app.listen(3003)
